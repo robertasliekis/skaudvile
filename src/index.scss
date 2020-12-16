@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@font-face {
+  font-family: "askan";
+  src: url("./font/hoftype__askan-webfont.woff2") format("woff2"), url("./font/hoftype__askan-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyriadPro-Semibold";
+  src: url("./font/MyriadProSemibold.ttf");
+}
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("./font/MyriadProRegular.ttf");
+}
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url("./font/MyriadProLight.otf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-inline-start: 0;
+  li {
+    list-style-type: none;
+    display: block;
+  }
+}
+
+:root {
+  --global-color-background: rgb(248, 248, 248);
+  --button-color-green: #7b9564;
+  --button-color-green-clicked: #85a765;
+  // --button-color-green-clicked: #94bd6e;
+
+  --global-padding-left-right: 15rem;
+  --website-info-column-width: 46%;
+  --font-color: #2a2a2a;
+
+  --btn-color-blue: rgb(0, 140, 255);
+  --btn-color-orange: rgb(255, 187, 0);
+  --btn-color-green: rgb(98, 202, 0);
+}
+
+p {
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "askan", serif;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+
+  //  background-color: var(--global-color-background);
+}
+
+@mixin displayFlex {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin displayFlexBetween {
+  @include displayFlex();
+  justify-content: space-between;
+}
+
+@mixin displayFlexColumn {
+  @include displayFlex();
+  flex-direction: column;
+}
+
+@mixin positionAbsoluteCenter {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+@mixin backgroundPositioning {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.App {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.overflow-wrapper {
+  width: 100%;
+  height: 100%;
+  @include displayFlexColumn();
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  // overflow: hidden;
+  .website-wrapper {
+    padding: 40px 0;
+    @include displayFlexColumn();
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-project-container {
+  width: 1000px;
+  @include displayFlexColumn();
+  margin-bottom: 50px;
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .description {
+    text-align: justify;
+  }
+}
+
+.interactive-map-container {
+  position: relative;
+  @include displayFlexColumn();
+  width: 100%;
+  height: 100%;
+}
+.interactive-map-images {
+  height: 800px;
+  width: 1000px;
+  position: relative;
+  z-index: 1;
+
+  .image-carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include backgroundPositioning();
+      background-size: 100% 100%;
+      animation-name: map-images-opacity-animation;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      // animation-play-state: paused;
+    }
+    .image:last-child {
+      animation: none;
+    }
+  }
+
+  @keyframes map-images-opacity-animation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .active-icons-container {
+    @include positionAbsoluteCenter();
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .icon-container {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+      .icon {
+        @include positionAbsoluteCenter();
+        width: 100%;
+        height: 100%;
+      }
+      .icon-glow {
+        z-index: 1;
+      }
+      .icon-image {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .icon-container:nth-child(1) {
+      top: 15%;
+      left: 61%;
+      .icon-image {
+        background-image: url("./images/map icons/kalniskiu3.gif");
+      }
+    }
+    .icon-container:nth-child(2) {
+      top: 42%;
+      left: 62%;
+      .icon-image {
+        background-image: url("./images/map icons/ivangenu3.gif");
+      }
+    }
+    .icon-container:nth-child(3) {
+      top: 56%;
+      left: 60%;
+      .icon-image {
+        background-image: url("./images/map icons/nosaiciu3.gif");
+      }
+    }
+
+    .icon-container:nth-child(4) {
+      top: 36%;
+      left: 7%;
+      .icon-image {
+        background-image: url("./images/map icons/jusikaiciu3.gif");
+      }
+    }
+    .icon-container:nth-child(5) {
+      top: 60%;
+      left: 46%;
+      .icon-image {
+        background-image: url("./images/map icons/galerija3.gif");
+      }
+    }
+  }
+}
+
+.categories-window-container {
+  @include positionAbsoluteCenter();
+  @include displayFlexColumn();
+  justify-content: flex-start;
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 3;
+  .buttons-container {
+    @include displayFlex();
+    width: 100%;
+    .btn {
+      @include displayFlex();
+      height: 40px;
+      width: 100px;
+      border: 1px solid black;
+    }
+    .active-category-button {
+      background-color: black;
+      color: white;
+    }
+  }
+  .container-about {
+    width: 100%;
+    padding: 40px;
+    @include displayFlexColumn();
+    .title {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+    .description {
+      font-size: 15px;
+    }
+  }
+  .container-tour {
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    @include displayFlexColumn();
+    font-size: 30px;
+    p:nth-child(1) {
+      margin-bottom: 20px;
+    }
+    p:nth-child(2) {
+      font-size: 40px;
+    }
+    .btn {
+      margin-top: 40px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+  }
+}
+
+.overlay-start-container {
+  @include positionAbsoluteCenter();
+  @include displayFlex();
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #7a7a7a, $alpha: 0.5);
+  z-index: 2;
+  .btn {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    font-size: 25px;
+  }
+}
+
+.tour-window-container {
+  @include positionAbsoluteCenter();
+  background-color: grey;
+  width: 900px;
+  height: 900px;
+  z-index: 5;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .model-view-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include displayFlex();
+
+    .loading-screen {
+      @include positionAbsoluteCenter();
+      @include displayFlex();
+      .text {
+        font-size: 25px;
+        color: white;
+        margin-right: 10px;
+      }
+      .icon {
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-size: cover;
+        background-image: url("./images/loading_icon.png");
+        animation-name: loading-screen-animation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes loading-screen-animation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+  .btn-close {
+    @include displayFlex();
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+}
