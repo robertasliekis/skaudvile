@@ -13,6 +13,7 @@
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "three": "^0.123.0",
+    "three-orbitcontrols": "^2.110.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
