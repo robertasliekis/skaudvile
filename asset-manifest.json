@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/skaudvile/static/css/main.8a3c9d91.chunk.css",
+    "main.js": "/skaudvile/static/js/main.988c2aae.chunk.js",
+    "main.js.map": "/skaudvile/static/js/main.988c2aae.chunk.js.map",
+    "runtime-main.js": "/skaudvile/static/js/runtime-main.26d4d058.js",
+    "runtime-main.js.map": "/skaudvile/static/js/runtime-main.26d4d058.js.map",
+    "static/js/2.7d5efa6d.chunk.js": "/skaudvile/static/js/2.7d5efa6d.chunk.js",
+    "static/js/2.7d5efa6d.chunk.js.map": "/skaudvile/static/js/2.7d5efa6d.chunk.js.map",
+    "static/js/3.e025e3e2.chunk.js": "/skaudvile/static/js/3.e025e3e2.chunk.js",
+    "static/js/3.e025e3e2.chunk.js.map": "/skaudvile/static/js/3.e025e3e2.chunk.js.map",
+    "index.html": "/skaudvile/index.html",
+    "static/css/main.8a3c9d91.chunk.css.map": "/skaudvile/static/css/main.8a3c9d91.chunk.css.map",
+    "static/js/2.7d5efa6d.chunk.js.LICENSE.txt": "/skaudvile/static/js/2.7d5efa6d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/skaudvile/static/media/nosaiciu3.ff40029f.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26d4d058.js",
+    "static/js/2.7d5efa6d.chunk.js",
+    "static/css/main.8a3c9d91.chunk.css",
+    "static/js/main.988c2aae.chunk.js"
+  ]
+}
