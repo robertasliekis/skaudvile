@@ -191,8 +191,8 @@ body {
 }
 
 .interactive-map-images {
-  height: 800px;
-  width: 1000px;
+  height: 900px;
+  width: 1200px;
   position: relative;
   z-index: 1;
 }
@@ -252,12 +252,14 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
 }
 
 .interactive-map-images .active-icons-container .icon-container {
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   cursor: pointer;
 }
 
@@ -321,7 +323,7 @@ body {
 }
 
 .interactive-map-images .active-icons-container .icon-container:nth-child(5) {
-  top: 60%;
+  top: 59%;
   left: 46%;
 }
 
@@ -375,7 +377,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+}
+
+.categories-window-container .buttons-container .category-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .categories-window-container .buttons-container .btn {
@@ -429,6 +450,11 @@ body {
 
 .categories-window-container .container-about .description {
   font-size: 15px;
+}
+
+.categories-window-container .container-about .btn-audio {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .categories-window-container .container-tour {
@@ -602,7 +628,7 @@ body {
   }
 }
 
-.tour-window-container .btn-close {
+.tour-window-container .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,11 +643,123 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
   width: 50px;
   height: 50px;
+}
+
+.tour-window-container .btn .icon {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.tour-window-container .btn .icon-audio-on {
+  background-image: url("./images/audio.svg");
+}
+
+.tour-window-container .btn .icon-audio-off {
+  background-image: url("./images/audio off.svg");
+}
+
+.tour-window-container .btn-close {
+  top: 50px;
+  right: 50px;
+}
+
+.tour-window-container .btn-close .icon {
+  background-image: url("./images/exit-full-screen.svg");
+}
+
+.tour-window-container .btn-audio {
+  bottom: 50px;
+  left: 50px;
+}
+
+.subcategories-window-buttons {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
   background-color: white;
+  width: 600px;
+  height: 200px;
+}
+
+.subcategories-window-buttons .selection-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subcategories-window-buttons .selection-buttons .btn {
+  padding: 20px;
   border: 1px solid black;
+  margin: 0 10px;
+}
+
+.subcategories-window-buttons .btn-close {
+  position: absolute;
+  padding: 10px;
+  border: 1px solid black;
+  top: 0;
+  right: 0;
+}
+
+.grey-overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-project-container {
+    width: 100%;
+  }
+  .interactive-map-images {
+    height: 700px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .about-project-container {
+    padding: 0 20px;
+  }
+  .interactive-map-images {
+    height: 300px;
+    width: 100%;
+  }
+  .interactive-map-images .active-icons-container .icon-container {
+    width: 70px;
+    height: 70px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

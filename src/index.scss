@@ -159,8 +159,8 @@ body {
   height: 100%;
 }
 .interactive-map-images {
-  height: 800px;
-  width: 1000px;
+  height: 900px;
+  width: 1200px;
   position: relative;
   z-index: 1;
 
@@ -192,7 +192,6 @@ body {
     100% {
       opacity: 0;
     }
-    //aaa
   }
 
   .active-icons-container {
@@ -200,10 +199,12 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
+    transition: 2s all ease;
+
     .icon-container {
       position: absolute;
-      width: 90px;
-      height: 90px;
+      width: 120px;
+      height: 120px;
       cursor: pointer;
       .icon {
         @include positionAbsoluteCenter();
@@ -252,7 +253,7 @@ body {
       }
     }
     .icon-container:nth-child(5) {
-      top: 60%;
+      top: 59%;
       left: 46%;
       .icon-image {
         background-image: url("./images/map icons/galerija3.gif");
@@ -271,8 +272,11 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   z-index: 3;
   .buttons-container {
-    @include displayFlex();
+    @include displayFlexBetween();
     width: 100%;
+    .category-buttons {
+      @include displayFlex();
+    }
     .btn {
       @include displayFlex();
       height: 40px;
@@ -294,6 +298,10 @@ body {
     }
     .description {
       font-size: 15px;
+    }
+    .btn-audio {
+      border: 1px solid black;
+      padding: 10px;
     }
   }
   .container-tour {
@@ -378,17 +386,92 @@ body {
       }
     }
   }
-  .btn-close {
+  .btn {
     @include displayFlex();
     position: absolute;
-    top: 0;
-    right: 0;
     width: 50px;
     height: 50px;
-    background-color: white;
-    border: 1px solid black;
+    .icon {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: 100% 100%;
+    }
+    .icon-audio-on {
+      background-image: url("./images/audio.svg");
+    }
+    .icon-audio-off {
+      background-image: url("./images/audio off.svg");
+    }
+  }
+  .btn-close {
+    top: 50px;
+    right: 50px;
+    .icon {
+      background-image: url("./images/exit-full-screen.svg");
+    }
+  }
+  .btn-audio {
+    bottom: 50px;
+    left: 50px;
   }
 }
 
-@media only screen and (max-width: 375px) {
+.subcategories-window-buttons {
+  @include positionAbsoluteCenter();
+  @include displayFlex();
+
+  z-index: 3;
+  background-color: white;
+  width: 600px;
+  height: 200px;
+  .selection-buttons {
+    @include displayFlex();
+    .btn {
+      padding: 20px;
+      border: 1px solid black;
+      margin: 0 10px;
+    }
+  }
+  .btn-close {
+    position: absolute;
+    padding: 10px;
+    border: 1px solid black;
+    top: 0;
+    right: 0;
+  }
+}
+
+.grey-overlay {
+  position: absolute;
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-project-container {
+    width: 100%;
+  }
+
+  .interactive-map-images {
+    height: 700px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .about-project-container {
+    padding: 0 20px;
+  }
+  .interactive-map-images {
+    height: 300px;
+    width: 100%;
+    .active-icons-container {
+      .icon-container {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
 }
