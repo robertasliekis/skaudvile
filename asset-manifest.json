@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/skaudvile/static/css/main.8a3c9d91.chunk.css",
-    "main.js": "/skaudvile/static/js/main.988c2aae.chunk.js",
-    "main.js.map": "/skaudvile/static/js/main.988c2aae.chunk.js.map",
+    "main.css": "/skaudvile/static/css/main.66712300.chunk.css",
+    "main.js": "/skaudvile/static/js/main.bd0ffee7.chunk.js",
+    "main.js.map": "/skaudvile/static/js/main.bd0ffee7.chunk.js.map",
     "runtime-main.js": "/skaudvile/static/js/runtime-main.26d4d058.js",
     "runtime-main.js.map": "/skaudvile/static/js/runtime-main.26d4d058.js.map",
-    "static/js/2.7d5efa6d.chunk.js": "/skaudvile/static/js/2.7d5efa6d.chunk.js",
-    "static/js/2.7d5efa6d.chunk.js.map": "/skaudvile/static/js/2.7d5efa6d.chunk.js.map",
+    "static/js/2.53f7614a.chunk.js": "/skaudvile/static/js/2.53f7614a.chunk.js",
+    "static/js/2.53f7614a.chunk.js.map": "/skaudvile/static/js/2.53f7614a.chunk.js.map",
     "static/js/3.e025e3e2.chunk.js": "/skaudvile/static/js/3.e025e3e2.chunk.js",
     "static/js/3.e025e3e2.chunk.js.map": "/skaudvile/static/js/3.e025e3e2.chunk.js.map",
     "index.html": "/skaudvile/index.html",
-    "static/css/main.8a3c9d91.chunk.css.map": "/skaudvile/static/css/main.8a3c9d91.chunk.css.map",
-    "static/js/2.7d5efa6d.chunk.js.LICENSE.txt": "/skaudvile/static/js/2.7d5efa6d.chunk.js.LICENSE.txt",
+    "static/css/main.66712300.chunk.css.map": "/skaudvile/static/css/main.66712300.chunk.css.map",
+    "static/js/2.53f7614a.chunk.js.LICENSE.txt": "/skaudvile/static/js/2.53f7614a.chunk.js.LICENSE.txt",
+    "static/media/01 Tamsioj Naktelėj - In The Dark Night.02c936e4.mp3": "/skaudvile/static/media/01 Tamsioj Naktelėj - In The Dark Night.02c936e4.mp3",
+    "static/media/07 Tu Eglute - Oh, the Spruce Tree.4443bf92.mp3": "/skaudvile/static/media/07 Tu Eglute - Oh, the Spruce Tree.4443bf92.mp3",
+    "static/media/09 Oi Tu Ieva, Ievuže - Oh, the Bird Cherry.46be4060.mp3": "/skaudvile/static/media/09 Oi Tu Ieva, Ievuže - Oh, the Bird Cherry.46be4060.mp3",
+    "static/media/10 Per Tiltą Jojau - I Was Riding Through the Bridge.f111fba4.mp3": "/skaudvile/static/media/10 Per Tiltą Jojau - I Was Riding Through the Bridge.f111fba4.mp3",
+    "static/media/1_Ivadas.746433d4.mp3": "/skaudvile/static/media/1_Ivadas.746433d4.mp3",
+    "static/media/2_Kalniskiu piliakalnis.86e524c5.mp3": "/skaudvile/static/media/2_Kalniskiu piliakalnis.86e524c5.mp3",
+    "static/media/3_Pirmasis Ivangenu piliakalnis.f59192bc.mp3": "/skaudvile/static/media/3_Pirmasis Ivangenu piliakalnis.f59192bc.mp3",
+    "static/media/4_Antras Ivangenu piliakalnis.1f422cab.mp3": "/skaudvile/static/media/4_Antras Ivangenu piliakalnis.1f422cab.mp3",
+    "static/media/5_Nosaiciu piliakalnis.7804b405.mp3": "/skaudvile/static/media/5_Nosaiciu piliakalnis.7804b405.mp3",
+    "static/media/6_Juskaiciu piliakalnis.c02ce6b8.mp3": "/skaudvile/static/media/6_Juskaiciu piliakalnis.c02ce6b8.mp3",
+    "static/media/7_Grafikos darbu paroda.a60b8d3a.mp3": "/skaudvile/static/media/7_Grafikos darbu paroda.a60b8d3a.mp3",
+    "static/media/8_Legenda apie karsuvos pili.dda7beba.mp3": "/skaudvile/static/media/8_Legenda apie karsuvos pili.dda7beba.mp3",
     "static/media/index.css": "/skaudvile/static/media/nosaiciu3.ff40029f.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.26d4d058.js",
-    "static/js/2.7d5efa6d.chunk.js",
-    "static/css/main.8a3c9d91.chunk.css",
-    "static/js/main.988c2aae.chunk.js"
+    "static/js/2.53f7614a.chunk.js",
+    "static/css/main.66712300.chunk.css",
+    "static/js/main.bd0ffee7.chunk.js"
   ]
 }
