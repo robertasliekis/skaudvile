@@ -71,7 +71,7 @@ export class InteractiveMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mapAnimationStarted: true,
+      mapAnimationStarted: false,
       categoriesWindowOpen: false,
       mapIconClickedIndex: 0,
       categoryType: "about",
@@ -108,6 +108,7 @@ export class InteractiveMap extends Component {
       this.setState({ categoriesWindowOpen: true, subcategoriesWindowOpen: false, subcategoryClickedIndex: index });
     }
     this.setState({ tourAudioIndex: tourAudioIndex });
+    this.audioIntroRef.current.pause();
     this.audioAboutRefs[this.state.mapIconClickedIndex].pause();
     this.audioAboutRefs[this.state.mapIconClickedIndex].currentTime = 0;
   };
@@ -185,7 +186,7 @@ export class InteractiveMap extends Component {
               );
             })}
           </div>
-          <div className="active-icons-container" style={{ opacity: this.state.mapAnimationStarted ? 1 : 0, transitionDelay: "5s" }}>
+          <div className="active-icons-container" style={{ opacity: this.state.mapAnimationStarted ? 1 : 0, transitionDelay: "8s" }}>
             {activeIconsArray.map((activeIcon, index) => {
               let subcategoriesNumber = activeIcon.length;
               let tourAudioIndex;
